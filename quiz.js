@@ -1,3 +1,4 @@
+// quiz.js
 const quizContainer = document.getElementById("quiz-container");
 
 const perguntas = [
@@ -41,3 +42,25 @@ function criarQuiz() {
 
         quizContainer.appendChild(perguntaDiv);
     });
+
+    const botaoVerificar = document.createElement("button");
+    botaoVerificar.textContent = "Verificar Respostas";
+    botaoVerificar.onclick = verificarRespostas;
+    quizContainer.appendChild(botaoVerificar);
+}
+
+function verificarRespostas() {
+    let pontos = 0;
+    perguntas.forEach((pergunta, index) => {
+        const respostas = document.getElementsByName(`pergunta${index}`);
+        respostas.forEach((resposta) => {
+            if (resposta.checked && resposta.value === pergunta.respostaCorreta) {
+                pontos++;
+            }
+        });
+    });
+    alert(`Você acertou ${pontos} de ${perguntas.length} perguntas!`);
+}
+
+// Inicia o quiz ao carregar a página
+window.onload = criarQuiz;
