@@ -1,9 +1,11 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -14,6 +16,7 @@ body {
     align-items: center;
 }
 
+/* Cabeçalho */
 header {
     width: 100%;
     background-color: #4b8cca;
@@ -26,3 +29,74 @@ header h1 {
     margin-bottom: 0.5em;
 }
 
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Seção de conteúdo principal */
+main {
+    padding: 2em;
+    max-width: 900px;
+    width: 100%;
+}
+
+#conteudo, #artigos, #missao {
+    margin-bottom: 2em;
+    padding: 1.5em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Artigos */
+#artigos article {
+    margin-bottom: 1em;
+}
+
+#artigos h3 {
+    color: #4b8cca;
+}
+
+/* Rodapé */
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: #4b8cca;
+    color: white;
+    padding: 1em;
+    margin-top: auto;
+}
+
+footer a {
+    color: #ffc107;
+}
+
+/* Estilos para o quiz */
+#quiz-container {
+    text-align: center;
+}
+
+button {
+    background-color: #4b8cca;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+button:hover {
+    background-color: #3a6c9e;
+}
+.
