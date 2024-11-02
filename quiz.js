@@ -18,3 +18,26 @@ const perguntas = [
     },
 ];
 
+function criarQuiz() {
+    perguntas.forEach((pergunta, index) => {
+        const perguntaDiv = document.createElement("div");
+        perguntaDiv.classList.add("pergunta");
+
+        const perguntaTexto = document.createElement("h3");
+        perguntaTexto.textContent = `${index + 1}. ${pergunta.pergunta}`;
+        perguntaDiv.appendChild(perguntaTexto);
+
+        pergunta.opcoes.forEach((opcao) => {
+            const opcaoLabel = document.createElement("label");
+            const opcaoInput = document.createElement("input");
+            opcaoInput.type = "radio";
+            opcaoInput.name = `pergunta${index}`;
+            opcaoInput.value = opcao;
+
+            opcaoLabel.appendChild(opcaoInput);
+            opcaoLabel.appendChild(document.createTextNode(opcao));
+            perguntaDiv.appendChild(opcaoLabel);
+        });
+
+        quizContainer.appendChild(perguntaDiv);
+    });
