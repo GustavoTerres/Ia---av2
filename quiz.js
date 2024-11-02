@@ -1,4 +1,3 @@
-
 const quizContainer = document.getElementById("quiz-container");
 
 const perguntas = [
